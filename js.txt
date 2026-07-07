@@ -1,0 +1,35 @@
+function addTask() {
+
+    task = document.getElementById("task").value;
+
+    if (task == "") {
+        alert("Please enter a task");
+        return;
+    }
+
+    today = new Date();
+    date = today.toLocaleDateString();
+
+    document.getElementById("tasklist").innerHTML += `
+    <div class="task">
+        <span>${date} <br> ${task}</span><br><br>
+        <button onclick="completeTask(this)">Complete</button>
+        <button onclick="deleteTask(this)">Delete</button>
+    </div>
+    `;
+
+    document.getElementById("task").value = "";
+}
+
+function completeTask(button) {
+    button.parentElement.style.backgroundColor = "lightgreen";
+    button.parentElement.style.textDecoration = "line-through";
+}
+
+function deleteTask(button) {
+    button.parentElement.remove();
+}
+
+function clearAll() {
+    document.getElementById("tasklist").innerHTML = "";
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Todo List</h1>
+
+        <input type="text" id="task" placeholder="Enter your task"><br><br>
+
+        
+
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="clearAll()"> Clear All</button>
+
+        <div id="tasklist"></div>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
